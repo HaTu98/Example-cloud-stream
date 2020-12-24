@@ -6,11 +6,12 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
 
 public interface ExampleChannel {
-    String EXAMPLE = "example";
+    String EXAMPLE = "training.example_input";
+    String EXAMPLE_OUTPUT = "training.example_output";
 
     @Output(EXAMPLE)
     MessageChannel exampleInput();
 
-    @Input(EXAMPLE)
+    @Input(EXAMPLE_OUTPUT)
     SubscribableChannel exampleOutput();
 }
